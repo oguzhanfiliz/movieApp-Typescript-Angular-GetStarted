@@ -7,22 +7,25 @@ import { MovieService } from "../movie.service";
   selector: 'movies',
   templateUrl: 'movies.component.html'
 })
-export class MoviesComponent{
+export class MoviesComponent {
 
-  title="Movie List";
+  title = "Movie List";
   movies = Movies;
-  selectedMovie:Movie;
+  selectedMovie: Movie;
 
-  constructor(private movieService:MovieService){}
-  ngOnInit():void{
+  constructor(private movieService: MovieService) { }
+  ngOnInit(): void {
     this.getMovies();
   }
-  onSelect(movie:Movie):void{
+  onSelect(movie: Movie): void {
     this.selectedMovie = movie;
   }
 
-  getMovies():void{
-    this.movies=this.movieService.getMovies();
+  getMovies(): void {
+    this.movieService.getMovies()
+      .subscribe(movies => {
+        this.movies = movies;
+      });
   }
 
 }

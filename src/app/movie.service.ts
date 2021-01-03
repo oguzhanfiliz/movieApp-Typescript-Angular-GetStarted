@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Movie } from './movie';
 import {Movies} from './movieDatasource';
+import {Observable,of} from 'rxjs';
+import { LogginService } from './loggin.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
 
-  constructor() { }
+  constructor(private logginService:LogginService) { }
 
-  getMovies(): Movie[]{
-    return Movies;
+  getMovies(): Observable<Movie[]>{
+    this.log 
+    return of(Movies);
   }
 }
