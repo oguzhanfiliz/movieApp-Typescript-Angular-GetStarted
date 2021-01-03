@@ -1,5 +1,12 @@
-<div class="card">
+<div class="card" *ngIf="logginService.messages.length">
+  <div class="card-header">
+    Messages
+  </div>
   <div class="card-body">
-    loggin works!
+    <button (click)="logginService.clear()" class="btn btn-primary btn-sm" >Clear</button>
+    <hr>
+    <p *ngFor="let message of logginService.messages">
+      {{message}}
+    </p>
   </div>
 </div>

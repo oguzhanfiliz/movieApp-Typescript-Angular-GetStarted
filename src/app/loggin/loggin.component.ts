@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LogginService } from '../loggin.service';
 
 @Component({
   selector: 'loggin',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogginComponent implements OnInit {
 
-  constructor() { }
+  constructor(public logginService:LogginService) { }
 
   ngOnInit(): void {
   }
