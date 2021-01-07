@@ -11,7 +11,7 @@ export class MoviesComponent {
 
   title = "Movie List";
   movies = Movies;
-  selectedMovie: Movie;
+  selectedMovie!: Movie;
 
   constructor(private movieService: MovieService) { }
   ngOnInit(): void {

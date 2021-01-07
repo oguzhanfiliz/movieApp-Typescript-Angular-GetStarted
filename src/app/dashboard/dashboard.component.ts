@@ -9,7 +9,7 @@ import { MovieService } from '../movie.service';
 })
 export class DashboardComponent implements OnInit {
   movies:Movie[] =[];
-  movieLength:number;
+  movieLength!: number;
   constructor(private movieService:MovieService) { }
 
   ngOnInit() {

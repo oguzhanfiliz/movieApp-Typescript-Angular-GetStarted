@@ -5,18 +5,18 @@
     </div>
     <div class="col-9">
       <div class="card-body">
-     <h5 class="card-title">
-       <a href="">{{movie.name}}</a>
-     </h5>
-     <p class="card-text">
-       {{movie.description}}
-     </p>
+        <h5 class="card-title">
+          <a routerLink='/detail/{{movie.id}}'>{{movie.name}}</a>
+        </h5>
+        <p class="card-text">
+          {{movie.description}}
+        </p>
       </div>
     </div>
   </div>
 
 </div>
 
-<div *ngIf="movieLength>2" class="text-center my-2">
+<div *ngIf="movieLength>5" class="text-center my-2">
   <a routerLink="/movies" href="" class="btn btn-primary"> More Movie</a>
 </div>
